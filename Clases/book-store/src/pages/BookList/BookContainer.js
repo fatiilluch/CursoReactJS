@@ -9,6 +9,10 @@ class _BookListContainer extends PureComponent{
     componentDidMount() {
         this.props.getBooks();
 
+        // getBookList()
+        // .then(books => this.props.getSuccessBooks(books))
+        // .catch(error => this.props.getFailedBooks(error)) // esto va a hacer un dispatch del action getSuccessBooks
+
         setTimeout(
             () => this.props.getSuccessBooks(getBookList()),
             5000

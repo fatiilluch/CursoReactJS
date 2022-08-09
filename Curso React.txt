@@ -326,3 +326,41 @@ como se evita?
 Material UI
 
 npm install @mui/material @emotion/react @emotion/styled
+
+Clase 5
+
+Actions 1 --> Son objetos que representan que quiero cambiar del store --> esto es asi porque 
+
+Son objetos planos, de javascript que representan lo que yo quiero cambiar. Es el disparador que activa todo el circuito de redux. 
+El action dice "yo quiero cambiar esto". 
+
+Actions 2
+
+- son objetos cuyo atributo type es requerido y el resto son opcionales
+
+Reducer 
+
+- son funciones puras que dicen como cambiar el store. 
+ 
+Store
+
+- Une los actions, reducers y el estado de aplicacion
+
+Funciones Puras
+
+- no deben tener efectos colaterales y no deben mutar sus parametros --> espero que haga su tarea y no otra cosa y siempre tiene que devolver 
+                                                                        los mismos parametros de entrada o una copia (que los que entraron)
+- acceden directamente al Store --> NO. No pueden acceder al store porque sino haria un efecto colateral. Si llamo a un reducer que me cambie el store 
+                                    directamente, estarria haciendo una accion colateral y eso no seria una funcion pura. 
+
+
+El action es quien estimula a los publisher o a los reducer para que funcione como tal 
+El reducer Le manda un estado nuevo al store, o por lo menos lo que tiene que cambiar. --> se relaciona con el publisher
+El store es el unico que conoce a los reducers y al codigo (subs) --> cuando hacemos objeto.suscribe, nos estamos suscribiendo entonce sel store guarda una referencia de 
+esos suscriptores --> broker
+componentes serian los subscribers
+
+Coleccion de postman:
+
+www.getpostman.com/collections/33bc492256ddccb4e32e
+
